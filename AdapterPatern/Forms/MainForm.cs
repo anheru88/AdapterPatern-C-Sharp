@@ -16,6 +16,8 @@ namespace AdapterPatern
     {
         private static SaveAdapter saveAdapter;
         private StudentForm studentMDIChild;
+        private SearchForm searchMDIChild;
+
 
         public MainForm()
         {
@@ -30,22 +32,37 @@ namespace AdapterPatern
 
         private void nuevoEstudianteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            
+
             if (studentMDIChild == null)
             {
                 studentMDIChild = new StudentForm(saveAdapter);
                 studentMDIChild.MdiParent = this;
             }
-            
+            else if (studentMDIChild.IsDisposed)
+            {
+                studentMDIChild = new StudentForm(saveAdapter);
+                studentMDIChild.MdiParent = this;
+            }
+
             studentMDIChild.Text = "New Student";
             studentMDIChild.Show();
         }
 
         private void buscarEstudianteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            SearchForm searchMDIChild = new SearchForm(saveAdapter);
+
+            if (searchMDIChild == null)
+            {
+                searchMDIChild = new SearchForm(saveAdapter);
+                searchMDIChild.MdiParent = this;
+            }
+            else if (searchMDIChild.IsDisposed)
+            {
+                searchMDIChild = new SearchForm(saveAdapter);
+                searchMDIChild.MdiParent = this;
+            }
+
             searchMDIChild.Text = "Search Student By Name";
-            searchMDIChild.MdiParent = this;
             searchMDIChild.Show();
         }
 
