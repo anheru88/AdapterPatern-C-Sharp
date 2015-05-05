@@ -15,6 +15,13 @@ namespace AdapterPatern
     public partial class MainForm : Form
     {
         private SaveAdapter saveAdapter;
+        private StudentForm studentMDIChild;
+
+        public MainForm()
+        {
+            InitializeComponent();
+        }
+
         public MainForm(SaveAdapter saveAdapter)
         {
             InitializeComponent();
@@ -23,9 +30,14 @@ namespace AdapterPatern
 
         private void nuevoEstudianteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            StudentForm studentMDIChild = new StudentForm();
+            
+            if (studentMDIChild == null)
+            {
+                studentMDIChild = new StudentForm();
+                studentMDIChild.MdiParent = this;
+            }
+            
             studentMDIChild.Text = "New Student";
-            studentMDIChild.MdiParent = this;
             studentMDIChild.Show();
         }
 
