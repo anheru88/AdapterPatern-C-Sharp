@@ -31,7 +31,7 @@
             this.lName = new System.Windows.Forms.Label();
             this.tName = new System.Windows.Forms.TextBox();
             this.bSearch = new System.Windows.Forms.Button();
-            this.bCancel = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lName
@@ -58,23 +58,23 @@
             this.bSearch.TabIndex = 2;
             this.bSearch.Text = "Search";
             this.bSearch.UseVisualStyleBackColor = true;
+            this.bSearch.Click += new System.EventHandler(this.bSearch_Click);
             // 
-            // bCancel
+            // label1
             // 
-            this.bCancel.Location = new System.Drawing.Point(152, 43);
-            this.bCancel.Name = "bCancel";
-            this.bCancel.Size = new System.Drawing.Size(75, 23);
-            this.bCancel.TabIndex = 3;
-            this.bCancel.Text = "Cancel";
-            this.bCancel.UseVisualStyleBackColor = true;
-            this.bCancel.Click += new System.EventHandler(this.bCancel_Click);
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(13, 85);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 13);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "No results yet.";
             // 
             // SearchForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 78);
-            this.Controls.Add(this.bCancel);
+            this.ClientSize = new System.Drawing.Size(284, 185);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.bSearch);
             this.Controls.Add(this.tName);
             this.Controls.Add(this.lName);
@@ -89,6 +89,6 @@
         private System.Windows.Forms.Label lName;
         private System.Windows.Forms.TextBox tName;
         private System.Windows.Forms.Button bSearch;
-        private System.Windows.Forms.Button bCancel;
+        private System.Windows.Forms.Label label1;
     }
 }

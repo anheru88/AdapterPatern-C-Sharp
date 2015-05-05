@@ -58,6 +58,7 @@ namespace AdapterPatern.Forms
             }
             s.address = tAddress.Text;
             saveAdapter.setElement(s);
+            System.Windows.Forms.MessageBox.Show("The new student was saved succesfully!");
             this.Close();
         }
 

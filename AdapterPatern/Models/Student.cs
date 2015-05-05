@@ -13,5 +13,14 @@ namespace AdapterPatern.Models
         public int age { get; set; }
         public String gender { get; set; }
         public String address { get; set; }
+
+        public override string ToString()
+        {
+            return "\nName: "+name+
+                "\nCode: "+code+
+                "\nAge: "+age+
+                "\nGender: "+gender+
+                "\nAddress: "+address;
+        }
     }
 }

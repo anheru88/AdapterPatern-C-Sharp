@@ -7,19 +7,39 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdapterPatern.Adapters;
 
 namespace AdapterPatern.Forms
 {
     public partial class SearchForm : Form
     {
-        public SearchForm()
+        private SaveAdapter saveAdapter;
+
+        public SearchForm(SaveAdapter s)
         {
             InitializeComponent();
+            saveAdapter = s;
         }
 
-        private void bCancel_Click(object sender, EventArgs e)
+        private void bSearch_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if(tName.Text != null){
+                string name = tName.Text;
+                if (saveAdapter.getElement(name) != null)
+                {
+                    label1.Text = saveAdapter.getElement(name).ToString();
+                }
+                else
+                {
+                    label1.Text = "No student found with that name.";
+                }
+                    
+            }else{
+                label1.Text = "Please write a name.";
+            }
+
         }
+
+
     }
 }
