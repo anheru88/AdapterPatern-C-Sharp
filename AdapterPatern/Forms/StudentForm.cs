@@ -8,14 +8,17 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using AdapterPatern.Adapters;
 
 namespace AdapterPatern.Forms
 {
     public partial class StudentForm : Form
     {
-        public StudentForm()
-        {
+        private SaveAdapter saveAdapter;
+        public StudentForm(SaveAdapter s)
+        {            
             InitializeComponent();
+            saveAdapter = s;
         }
 
         private void tAge_KeyPress(object sender, KeyPressEventArgs e)
@@ -46,7 +49,9 @@ namespace AdapterPatern.Forms
             s.age = Convert.ToInt32(tAge.Text);
             s.gender = "";
             s.address = tAddress.Text;
-
+            saveAdapter.setElement(s);
+            System.Windows.Forms.MessageBox.Show("The new student was saved succesfully!");
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
