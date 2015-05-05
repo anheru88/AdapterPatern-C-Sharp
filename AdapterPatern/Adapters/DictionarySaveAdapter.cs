@@ -12,6 +12,11 @@ namespace AdapterPatern.Adapters
 
         private Dictionary<String, Student> StudentDictionary;
 
+        public DictionarySaveAdapter()
+        {
+            StudentDictionary = new Dictionary<string,Student>();
+        }
+
         public void setElement(Student s)
         {
             StudentDictionary.Add(s.name, s);
