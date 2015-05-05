@@ -9,7 +9,7 @@ namespace AdapterPatern.Adapters
 {
     interface SaveAdapter
     {
-        public void setElement(Student s);
-        public Student getElement(String name);
+        void setElement(Student s);
+        Student getElement(String name);
     }
 }
