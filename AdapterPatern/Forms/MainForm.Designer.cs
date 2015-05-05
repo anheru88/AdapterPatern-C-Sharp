@@ -136,7 +136,7 @@
             this.toolStripButton3.Text = "Close ";
             this.toolStripButton3.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
-            // Form1
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -144,8 +144,8 @@
             this.Controls.Add(this.Menu2);
             this.Controls.Add(this.Menu1);
             this.IsMdiContainer = true;
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "MainForm";
+            this.Text = "Adapter Pattern";
             this.Menu1.ResumeLayout(false);
             this.Menu1.PerformLayout();
             this.Menu2.ResumeLayout(false);

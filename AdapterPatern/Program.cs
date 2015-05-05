@@ -15,7 +15,8 @@ namespace AdapterPatern
         [STAThread]
         static void Main()
         {
-            ListSaveAdapter List = new ListSaveAdapter();
+            //ListSaveAdapter List = new ListSaveAdapter();
+            DictionarySaveAdapter List = new DictionarySaveAdapter();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new MainForm(List));
