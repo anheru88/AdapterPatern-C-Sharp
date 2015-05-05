@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdapterPatern.Forms;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +18,12 @@ namespace AdapterPatern
             InitializeComponent();
         }
 
-        private void toolStripLabel1_Click(object sender, EventArgs e)
+        private void nuevoEstudianteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            StudentForm studentMDIChild = new StudentForm();
+            studentMDIChild.Text = "New Student";
+            studentMDIChild.MdiParent = this;
+            studentMDIChild.Show();
         }
     }
 }
