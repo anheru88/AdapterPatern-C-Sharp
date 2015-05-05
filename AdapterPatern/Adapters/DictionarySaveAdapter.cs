@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdapterPatern.Adapters
 {
-    class DictionarySaveAdapter : SaveAdapter
+    public class DictionarySaveAdapter : SaveAdapter
     {
 
         private Dictionary<String, Student> StudentDictionary;

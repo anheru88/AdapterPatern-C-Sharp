@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AdapterPatern.Adapters
 {
-    class ListSaveAdapter : SaveAdapter
+    public class ListSaveAdapter : SaveAdapter
     {
         private List<Student> StudentList;
 

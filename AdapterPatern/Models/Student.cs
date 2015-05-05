@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AdapterPatern.Models
 {
-    class Student
+    public class Student
     {
         public String name { get; set; }
         public String code { get; set; }

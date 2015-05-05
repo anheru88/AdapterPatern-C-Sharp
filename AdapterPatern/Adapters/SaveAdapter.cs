@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace AdapterPatern.Adapters
 {
-    interface SaveAdapter
+    public interface SaveAdapter
     {
-        void setElement(Student s);
-        Student getElement(String name);
+       void setElement(Student s);
+       Student getElement(String name);
     }
 }
