@@ -16,5 +16,10 @@ namespace AdapterPatern.Forms
         {
             InitializeComponent();
         }
+
+        private void bCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

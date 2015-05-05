@@ -109,6 +109,7 @@
             this.rMale.Size = new System.Drawing.Size(48, 17);
             this.rMale.TabIndex = 7;
             this.rMale.TabStop = true;
+            this.rMale.Tag = "";
             this.rMale.Text = "Male";
             this.rMale.UseVisualStyleBackColor = true;
             // 
@@ -120,6 +121,7 @@
             this.rFemale.Size = new System.Drawing.Size(59, 17);
             this.rFemale.TabIndex = 8;
             this.rFemale.TabStop = true;
+            this.rFemale.Tag = "F";
             this.rFemale.Text = "Female";
             this.rFemale.UseVisualStyleBackColor = true;
             // 

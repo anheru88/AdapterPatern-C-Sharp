@@ -1,4 +1,5 @@
-﻿using AdapterPatern.Models;
+﻿using AdapterPatern.Adapters;
+using AdapterPatern.Models;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,12 @@ namespace AdapterPatern.Forms
 {
     public partial class StudentForm : Form
     {
-        public StudentForm()
+        private SaveAdapter saveAdapter;
+
+        public StudentForm(SaveAdapter saveAdapter)
         {
             InitializeComponent();
+            this.saveAdapter = saveAdapter;
         }
 
         private void tAge_KeyPress(object sender, KeyPressEventArgs e)
@@ -44,9 +48,17 @@ namespace AdapterPatern.Forms
             s.name = tName.Text;
             s.code = tCode.Text;
             s.age = Convert.ToInt32(tAge.Text);
-            s.gender = "";
+            if (rMale.Checked)
+            {
+                s.gender = rMale.Text;
+            }
+            else if(rFemale.Checked)
+            {
+                s.gender = rFemale.Text;
+            }
             s.address = tAddress.Text;
-
+            saveAdapter.setElement(s);
+            this.Close();
         }
 
         private void button1_Click(object sender, EventArgs e)
