@@ -16,5 +16,10 @@ namespace AdapterPatern
         {
             InitializeComponent();
         }
+
+        private void toolStripLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
