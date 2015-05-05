@@ -1,4 +1,5 @@
-﻿using AdapterPatern.Forms;
+﻿using AdapterPatern.Adapters;
+using AdapterPatern.Forms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,11 @@ namespace AdapterPatern
 {
     public partial class MainForm : Form
     {
-        public MainForm()
+        private SaveAdapter saveAdapter;
+        public MainForm(SaveAdapter saveAdapter)
         {
             InitializeComponent();
+            this.saveAdapter = saveAdapter;
         }
 
         private void nuevoEstudianteToolStripMenuItem_Click(object sender, EventArgs e)
