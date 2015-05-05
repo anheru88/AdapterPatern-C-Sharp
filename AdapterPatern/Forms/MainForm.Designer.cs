@@ -1,6 +1,6 @@
 ﻿namespace AdapterPatern
 {
-    partial class Form1
+    partial class MainForm
     {
         /// <summary>
         /// Variable del diseñador requerida.
@@ -30,14 +30,14 @@
         {
             this.Menu1 = new System.Windows.Forms.ToolStrip();
             this.label1 = new System.Windows.Forms.ToolStripDropDownButton();
+            this.nuevoEstudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.buscarEstudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu2 = new System.Windows.Forms.ToolStrip();
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.nuevoEstudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.buscarEstudianteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menu1.SuspendLayout();
             this.Menu2.SuspendLayout();
             this.SuspendLayout();
@@ -64,10 +64,34 @@
             this.label1.Size = new System.Drawing.Size(38, 22);
             this.label1.Text = "File";
             // 
+            // nuevoEstudianteToolStripMenuItem
+            // 
+            this.nuevoEstudianteToolStripMenuItem.Image = global::AdapterPatern.Properties.Resources.add;
+            this.nuevoEstudianteToolStripMenuItem.Name = "nuevoEstudianteToolStripMenuItem";
+            this.nuevoEstudianteToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.nuevoEstudianteToolStripMenuItem.Text = "New Student";
+            this.nuevoEstudianteToolStripMenuItem.Click += new System.EventHandler(this.nuevoEstudianteToolStripMenuItem_Click);
+            // 
+            // buscarEstudianteToolStripMenuItem
+            // 
+            this.buscarEstudianteToolStripMenuItem.Image = global::AdapterPatern.Properties.Resources.search;
+            this.buscarEstudianteToolStripMenuItem.Name = "buscarEstudianteToolStripMenuItem";
+            this.buscarEstudianteToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.buscarEstudianteToolStripMenuItem.Text = "Search Student";
+            this.buscarEstudianteToolStripMenuItem.Click += new System.EventHandler(this.buscarEstudianteToolStripMenuItem_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(150, 6);
+            // 
+            // salirToolStripMenuItem
+            // 
+            this.salirToolStripMenuItem.Image = global::AdapterPatern.Properties.Resources.shutdown;
+            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
+            this.salirToolStripMenuItem.Text = "Close";
+            this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Menu2
             // 
@@ -100,6 +124,7 @@
             this.toolStripButton2.Name = "toolStripButton2";
             this.toolStripButton2.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton2.Text = "Search Student";
+            this.toolStripButton2.Click += new System.EventHandler(this.buscarEstudianteToolStripMenuItem_Click);
             // 
             // toolStripButton3
             // 
@@ -109,28 +134,7 @@
             this.toolStripButton3.Name = "toolStripButton3";
             this.toolStripButton3.Size = new System.Drawing.Size(23, 22);
             this.toolStripButton3.Text = "Close ";
-            // 
-            // nuevoEstudianteToolStripMenuItem
-            // 
-            this.nuevoEstudianteToolStripMenuItem.Image = global::AdapterPatern.Properties.Resources.add;
-            this.nuevoEstudianteToolStripMenuItem.Name = "nuevoEstudianteToolStripMenuItem";
-            this.nuevoEstudianteToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.nuevoEstudianteToolStripMenuItem.Text = "New Student";
-            this.nuevoEstudianteToolStripMenuItem.Click += new System.EventHandler(this.nuevoEstudianteToolStripMenuItem_Click);
-            // 
-            // buscarEstudianteToolStripMenuItem
-            // 
-            this.buscarEstudianteToolStripMenuItem.Image = global::AdapterPatern.Properties.Resources.search;
-            this.buscarEstudianteToolStripMenuItem.Name = "buscarEstudianteToolStripMenuItem";
-            this.buscarEstudianteToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.buscarEstudianteToolStripMenuItem.Text = "Search Student";
-            // 
-            // salirToolStripMenuItem
-            // 
-            this.salirToolStripMenuItem.Image = global::AdapterPatern.Properties.Resources.shutdown;
-            this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(153, 22);
-            this.salirToolStripMenuItem.Text = "Close";
+            this.toolStripButton3.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
             // Form1
             // 

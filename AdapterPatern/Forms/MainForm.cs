@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace AdapterPatern
 {
-    public partial class Form1 : Form
+    public partial class MainForm : Form
     {
-        public Form1()
+        public MainForm()
         {
             InitializeComponent();
         }
@@ -24,6 +24,19 @@ namespace AdapterPatern
             studentMDIChild.Text = "New Student";
             studentMDIChild.MdiParent = this;
             studentMDIChild.Show();
+        }
+
+        private void buscarEstudianteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            SearchForm searchMDIChild = new SearchForm();
+            searchMDIChild.Text = "Search Student By Name";
+            searchMDIChild.MdiParent = this;
+            searchMDIChild.Show();
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
