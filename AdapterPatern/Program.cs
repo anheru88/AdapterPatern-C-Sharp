@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AdapterPatern.Adapters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,9 +15,10 @@ namespace AdapterPatern
         [STAThread]
         static void Main()
         {
+            ListSaveAdapter List = new ListSaveAdapter();
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            Application.Run(new MainForm(List));
         }
     }
 }
