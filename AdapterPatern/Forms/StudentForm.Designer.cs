@@ -90,6 +90,7 @@
             this.tAge.Name = "tAge";
             this.tAge.Size = new System.Drawing.Size(318, 20);
             this.tAge.TabIndex = 5;
+            this.tAge.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tAge_KeyPress);
             // 
             // lGender
             // 
@@ -147,6 +148,7 @@
             this.bSave.TabIndex = 11;
             this.bSave.Text = "Save";
             this.bSave.UseVisualStyleBackColor = true;
+            this.bSave.Click += new System.EventHandler(this.bSave_Click);
             // 
             // button1
             // 
@@ -156,6 +158,7 @@
             this.button1.TabIndex = 12;
             this.button1.Text = "Cancel";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // StudentForm
             // 
